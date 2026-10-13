@@ -1,32 +1,22 @@
-# PanelTide 0.8.0: getting started
+# PanelTide 0.9.0 Windows preview
 
-PanelTide is an unsigned Windows x64 preview for focused comic editorial review. A professional release is still in development.
+Download the versioned Windows x64 installer or portable EXE from the PanelTide product site/release. Verify its SHA-256 against the release checksums. These binaries are unsigned engineering previews; Windows may identify an unrecognized publisher. Make your own security decision. No security settings need changing.
 
-## Open your workspace
+Install for your Windows user, then open PanelTide. The portable app uses the same per-user data location rather than storing work beside the EXE. The local companion is bundled; Node/terminal startup is not required. Existing Photoshop/Clip Studio licences and AI-provider access are separate.
 
-1. Close an already open PanelTide before installing an update.
-2. Download the Windows installer and open it. It installs for the current Windows user. The portable executable is the alternative when you want to run without installation.
-3. Open PanelTide. The included original schematic comic lets you explore the workspace before importing your own material.
-4. Choose one page or neighbouring pages, add your story intent and prepare a review.
+1. Open **Your comics**. The original sample is labelled. Choose **Create a new comic**, give it a name and select reading direction. New starts empty and preserves existing comics.
+2. Export static noninterlaced PNG pages from your drawing app. **Choose PNG pages**, inspect previews/names/order, then **Add pages to this comic**. Original PNG bytes are retained locally. Review previews are separate derivatives; they are not print masters.
+3. Add story intent, character and page notes in the review/Page studio fields. Save before preparing a review. Physical panels/balloons/text geometry in imported art remain unknown.
+4. In **Connections**, an existing compatible signed-in Codex can use **Check connection with a sample page**. Only our original sample/brief goes to OpenAI cloud. A valid completion makes the route Available. Codex installation/human sign-in remain prerequisites; automatic installation/authentication is not included. Official setup: https://learn.chatgpt.com/docs/codex/cli and https://learn.chatgpt.com/docs/auth . A ChatGPT/Claude browser subscription is not an API key.
+5. Choose one page or its available neighbours, prepare the exact local context, then explicitly **Analyze these pages**. It sends only that scoped context/image material to the shown provider. It may use your Codex plan allowance; remaining usage/exact cost are unknown. Keep intentional choices or create manual tasks; recommendations never edit art automatically.
+6. **Export current comic** saves a self-contained `.paneltide` file with saved pages/previews, retained original PNGs, notes and supplied credits. Open that file as a separate local comic. Review/task history, AI access, credentials and operational logs are excluded. **Export original PNG** retrieves exact retained source bytes.
 
-## Verify AI access
+Limits: up to10 local comics/30pages per comic,12MiB per PNG,48MiB distinct originals/comic,24million pixels/image,1600px maximum preview edge/100px minimum each dimension,24MiB encoded previews/comic,100MiB library data,96MiB project-request bound. Animated/interlaced PNG and native PSD/PSB/.clip formats are unsupported. Earlier valid embedded JPEG references remain readable; missing originals are not reconstructed.
 
-This preview requires an existing compatible Codex CLI signed in with ChatGPT for its tested automatic route. PanelTide does not install or sign in to Codex automatically. See the [official CLI setup guide](https://learn.chatgpt.com/docs/codex/cli) and [official authentication guide](https://learn.chatgpt.com/docs/auth) when prerequisites are missing. A ChatGPT subscription is separate from API billing and does not establish every model's access.
+Your saved work lives at `%APPDATA%\PanelTide\workspace`; cache is separate. Local data is unencrypted/OS-user-readable. Existing0.8 project.json is copied into an identity-bearing library without rewriting it; old immutable reviews stay readable. Legacy no-ID history is grouped under the migrated original comic, not independently authenticated. Save/switch waits for active AI jobs; stale saves require refresh/comparison. Newer pending-save edits stay unsaved. Drafts are window-local, not universally crash-durable. Keep native artwork and independent backups. Missing/corrupt initialized libraries stop rather than silently seed a sample; complete recovery UI/backups remain a future gate.
 
-In PanelTide, open Connections, read the sharing/allowance notice and choose **Check connection with a sample page**. The check sends one fixed PanelTide sample to your configured provider, not your comic. After a successful check, return to the prepared review and choose **Analyze**. Starting a review explicitly shares its included material with the selected provider. Account permissions and provider limits still apply; PanelTide does not display invented remaining allowance or costs.
+Photoshop plugin0.5.0 is a **development ZIP**, installed with Adobe UXP Developer Tools. Native evidence covers Photoshop27.11 Windows only; API target24.2 is not a verified version range. Explicit selected text/image Send, text Preview/Apply/Undo are bounded supported paths. Automatic generation/balloon edits, Mac executable and native Clip Studio automation are not connected. Clip Studio currently exports PNG into the companion; actual CSP end-to-end proof remains open.
 
-## Keep creative control
+The preview has no PanelTide login, paid plan, invoice, production licence entitlement, device quota, telemetry or automatic updater. Professional editorial quality, independent novice/editor usability, signing, full recovery and broader accessibility remain release gates. A registered source is not verified claim support; no publication approval or ideal panel count is guaranteed.
 
-Recommendations identify their scope, alternatives, uncertainty and references. A cited source is not automatically verified support. Tasks and Done are creator notes, not proof of an artwork edit. Broader chapter/script review and independent editorial-quality evaluation remain open. Imported images currently become review derivatives up to1600px; retain your original masters elsewhere. This preview keeps one local project, with a fuller New/Open/Save As lifecycle still being built.
-
-## Photoshop and Clip Studio Paint
-
-The Photoshop0.5.0 download is a **development ZIP**, loaded through Adobe UXP Developer Tools after extracting its folder. It is not a signed .ccx installer. Manifest API target is Photoshop24.2+, with historical native evidence only on27.11.0 Windows. The panel supports explicit text/image sends and selected-text Preview/Apply/Undo; it does not offer automatic generative-art API execution. Genuine Developer Mode, authentication and security prompts are the human's decisions. Photoshop is a separately licensed product.
-
-Clip Studio Paint uses a companion file workflow; no native Clip Studio plugin is provided. No Mac or ARM executable is available.
-
-## Data, notices and support
-
-Saved work is local to the Windows profile and separate from app installation. It is OS-user-readable and unencrypted. AI sharing is a separate explicit action. No PanelTide account, billing, telemetry or auto-update service is active in this preview. Third-party runtime licences are included in the app and copied verbatim in the notices ZIP. This does not grant an open-source licence for PanelTide itself.
-
-[Report a reproducible preview issue](https://github.com/kmpardav/paneltide-downloads/issues). Include version, Windows version, steps and whether you used installer or portable. Use original sample material for public examples; omit credentials, private client artwork and raw account logs.
+Report problems at https://github.com/kmpardav/paneltide-downloads/issues/new/choose with version, OS/host, steps and visible error. Remove private art, credentials and account details before posting. Keep copied source attribution/licence notes; no artist/provider endorsement is implied.
