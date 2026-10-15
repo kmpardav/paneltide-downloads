@@ -1,33 +1,38 @@
 # PanelTide downloads
 
-PanelTide helps comic creators review story intent, page flow, dialogue, lettering and continuity while keeping creative decisions explicit. This repository distributes **unsigned Windows x64 previews**. It contains distribution documentation and release assets; the development repository, design material and personal validation history remain private.
+PanelTide is a local editorial partner for comic creators. It helps you review story intent, page flow, dialogue, lettering and continuity, keeps your decisions explicit, and never changes your artwork without an explicit, reversible step. This repository distributes **unsigned Windows x64 previews**, their notes and the public website. The development repository, design material and personal validation history remain private.
 
-## Download 0.9.0
+Website and creator's guide: https://kmpardav.github.io/paneltide-downloads/
 
-- [Windows installer](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.9.0/PanelTide-0.9.0-Windows-x64-setup.exe)
-- [Windows portable executable](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.9.0/PanelTide-0.9.0-Windows-x64-portable.exe)
-- [Photoshop 0.5.0 development ZIP](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.9.0/PanelTide-Photoshop-0.5.0-development.zip)
-- [Getting started](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.9.0/GETTING-STARTED.md)
-- [SHA256 checksums](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.9.0/SHA256SUMS.txt)
-- [Third-party runtime notices](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.9.0/PanelTide-0.9.0-Third-Party-Notices.zip)
-- [All release files and notes](https://github.com/kmpardav/paneltide-downloads/releases/tag/v0.9.0)
+## Download 0.10.0
 
-The versioned release links allow downloads without a GitHub account. No Mac or ARM executable is available. The Photoshop ZIP requires Adobe UXP Developer Tools; it is **not a signed `.ccx` installer**. Its API target is Photoshop 24.2+, with historical native evidence only on Photoshop 27.11.0 Windows. Clip Studio Paint has a companion file workflow; no native Clip Studio plugin is provided.
+- [Windows installer](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.10.0/PanelTide-0.10.0-Windows-x64-setup.exe)
+- [Windows portable executable](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.10.0/PanelTide-0.10.0-Windows-x64-portable.exe)
+- [Photoshop 0.5.0 development ZIP](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.10.0/PanelTide-Photoshop-0.5.0-development.zip)
+- [Getting started](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.10.0/GETTING-STARTED.md)
+- [Release notes](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.10.0/RELEASE-NOTES.md)
+- [SHA256 checksums](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.10.0/SHA256SUMS.txt)
+- [Third-party runtime notices](https://github.com/kmpardav/paneltide-downloads/releases/download/v0.10.0/PanelTide-0.10.0-Third-Party-Notices.zip)
+- [All release files](https://github.com/kmpardav/paneltide-downloads/releases/tag/v0.10.0)
+
+The versioned links allow downloads without a GitHub account. Installing 0.10.0 over 0.9 keeps your workspace in `%APPDATA%\PanelTide\workspace`; make a backup in **Backup and recovery** first. No Mac or ARM executable is available. The Photoshop ZIP requires Adobe UXP Developer Tools and is **not a signed `.ccx` installer**; the panel is optional because the app can work with Photoshop directly on Windows. Clip Studio Paint uses PNG exchange; no native Clip Studio plugin is provided.
+
+## What 0.10 adds
+
+Large collections of up to 5,000 pages, scripts and story bibles, planned reviews across fifteen editorial disciplines with honest coverage, a managing-editor summary of saved advice, manual work with tasks and tool briefs, an optional edit studio for crops, masks and candidate comparison, page exchange with drawing apps, direct Photoshop access without the panel, complete work backups, and recovery of unsaved inputs. See the release notes for details and limits.
 
 ## AI access and creative control
 
-The tested automatic route requires an existing compatible Codex CLI signed in with ChatGPT. PanelTide 0.9 does not automatically install or sign in to Codex. In the app, read the Connections notice and run **Check connection with a sample page** before using Analyze. The check shares one fixed PanelTide sample, not your comic. Analyze explicitly shares the selected review material with the configured AI provider. Provider permissions and limits apply; a subscription does not establish API credits or every model's entitlement.
+The tested automatic route requires an existing compatible Codex CLI signed in with ChatGPT; PanelTide does not install or sign in to it for you. Optional OpenAI, Anthropic, Gemini, Ollama and OpenAI-compatible routes can be configured but have not yet been verified against live provider accounts. Only the material you explicitly prepare is shared, and a chat subscription is not API credit.
 
-Advice exposes scope, alternatives, uncertainty and citations. Registered sources are not automatically verified claim support. Tasks and Done are creator notes, not evidence that artwork changed. Independent novice/professional editorial evaluation and the final professional release remain in development.
-
-Version 0.9 adds separate named comics, ordered static noninterlaced PNG intake, exact retained originals and self-contained .paneltide export/import. Review previews remain bounded to 1600px. Portable comic files carry saved pages, context and supplied credits; review/task history and AI access are excluded. Keep native artwork and independent backups. Complete installed intake dialogs, recovery, accessibility and independent creator acceptance remain open. Saved local data is OS-user-readable and unencrypted. No PanelTide billing, telemetry or automatic update service is active.
+Advice exposes scope, alternatives, uncertainty and citations. Registered sources are not automatically verified claim support. Tasks marked Done are your notes, not evidence that artwork changed. Independent editorial evaluation, accessibility review and code signing remain future release gates. Saved local data is readable by your Windows user and is not encrypted by PanelTide. No PanelTide billing, telemetry or automatic update service is active.
 
 ## Source and notices
 
-GitHub's automatic source archives for **this downloads repository** contain public distribution documentation, not the PanelTide development source. Shipped Electron and plugin JavaScript remains inspectable; a private development repository is not an obfuscation guarantee.
+GitHub's automatic source archives for **this downloads repository** contain public distribution documentation, not the PanelTide development source. The website is published from the `gh-pages` branch. Shipped Electron and plugin JavaScript remains inspectable; a private development repository is not an obfuscation guarantee.
 
-The app includes Electron and Chromium third-party notices, including Node.js dependencies. The notices ZIP copies the actual packaged notices verbatim. These component licences do not grant an open-source licence to PanelTide itself. No paid plan, commercial licence terms or support SLA is invented by this preview repository.
+The app includes Electron and Chromium third-party notices, including Node.js dependencies. The notices ZIP copies the packaged notices verbatim. These component licences do not grant an open-source licence to PanelTide itself. No paid plan, commercial licence terms or support SLA is offered by this preview.
 
 ## Report a preview issue
 
-[Open an issue](https://github.com/kmpardav/paneltide-downloads/issues) with the app version, Windows version, installer/portable choice, steps and expected versus actual behaviour. Use the included original sample for public examples. Omit credentials, private client artwork and raw account logs.
+[Open an issue](https://github.com/kmpardav/paneltide-downloads/issues/new/choose) with the app version, Windows version, installer or portable choice, steps and expected versus actual behaviour. Use the included original sample for public examples. Omit credentials, private client artwork and raw account logs.
